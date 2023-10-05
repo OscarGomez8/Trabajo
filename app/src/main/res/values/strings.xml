@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Trabajo2</string>
+    <string name="Nombre">Ingrese su Nombre</string>
+    <string name="Apellido">Ingrese su Apellido</string>
+    <string name="Edad">Ingrese su Edad</string>
+    <string name="Correo">Ingrese su Correo Electrónico</string>
+    <string name="Respuesta">Registro Ingresado con Exito</string>
+    <string name="ErrorRespuesta">Error no se pudo registrar</string>
+    <string name="btnAgregar">PROCESAR</string>
+    <string name="btnRegresar">REGRESAR</string>
+</resources>
