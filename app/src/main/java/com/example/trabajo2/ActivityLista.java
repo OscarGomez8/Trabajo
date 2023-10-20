@@ -6,8 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.trabajo2.Models.Personas;
 import com.example.trabajo2.configuracion.SQLiteConexion;
@@ -39,12 +41,14 @@ public class ActivityLista extends AppCompatActivity {
             ArrayAdapter adp = new ArrayAdapter(this, android.R.layout.simple_list_item_1, ArregloPersonas);
             listView.setAdapter(adp);
 
-            listView.setOnClickListener(new View.OnClickListener() {
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
-                public void onClick(View view) {
-
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    String ItemPersonas = listPersonas.get(i).getNombres();
+                    Toast.makeText(ActivityLista.this, "Nombre" + ItemPersonas, Toast.LENGTH_LONG).show();
                 }
             });
+
 
 
         }catch(Exception ex){
